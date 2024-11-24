@@ -15,6 +15,12 @@ namespace MusicApplication
         public Form1()
         {
             InitializeComponent();
+            this.Text = "Music App";
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
