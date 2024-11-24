@@ -43,9 +43,10 @@
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(67, 366);
+            this.backButton.Location = new System.Drawing.Point(89, 450);
+            this.backButton.Margin = new System.Windows.Forms.Padding(4);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(75, 23);
+            this.backButton.Size = new System.Drawing.Size(100, 28);
             this.backButton.TabIndex = 0;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = true;
@@ -53,60 +54,71 @@
             // 
             // pauseButton
             // 
-            this.pauseButton.Location = new System.Drawing.Point(148, 366);
+            this.pauseButton.Location = new System.Drawing.Point(197, 450);
+            this.pauseButton.Margin = new System.Windows.Forms.Padding(4);
             this.pauseButton.Name = "pauseButton";
-            this.pauseButton.Size = new System.Drawing.Size(75, 23);
+            this.pauseButton.Size = new System.Drawing.Size(100, 28);
             this.pauseButton.TabIndex = 1;
             this.pauseButton.Text = "Pause/Start";
             this.pauseButton.UseVisualStyleBackColor = true;
             // 
             // nextbutton
             // 
-            this.nextbutton.Location = new System.Drawing.Point(229, 366);
+            this.nextbutton.Location = new System.Drawing.Point(305, 450);
+            this.nextbutton.Margin = new System.Windows.Forms.Padding(4);
             this.nextbutton.Name = "nextbutton";
-            this.nextbutton.Size = new System.Drawing.Size(75, 23);
+            this.nextbutton.Size = new System.Drawing.Size(100, 28);
             this.nextbutton.TabIndex = 2;
             this.nextbutton.Text = "Next";
             this.nextbutton.UseVisualStyleBackColor = true;
             // 
             // volumeSlider
             // 
-            this.volumeSlider.Location = new System.Drawing.Point(126, 315);
+            this.volumeSlider.Location = new System.Drawing.Point(168, 388);
+            this.volumeSlider.Margin = new System.Windows.Forms.Padding(4);
             this.volumeSlider.Name = "volumeSlider";
-            this.volumeSlider.Size = new System.Drawing.Size(112, 45);
+            this.volumeSlider.Size = new System.Drawing.Size(149, 56);
             this.volumeSlider.TabIndex = 3;
             // 
             // songImage
             // 
+            this.songImage.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.songImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("songImage.BackgroundImage")));
-            this.songImage.Location = new System.Drawing.Point(102, 42);
+            this.songImage.ErrorImage = ((System.Drawing.Image)(resources.GetObject("songImage.ErrorImage")));
+            this.songImage.Image = ((System.Drawing.Image)(resources.GetObject("songImage.Image")));
+            this.songImage.InitialImage = ((System.Drawing.Image)(resources.GetObject("songImage.InitialImage")));
+            this.songImage.Location = new System.Drawing.Point(122, 9);
+            this.songImage.Margin = new System.Windows.Forms.Padding(0);
             this.songImage.Name = "songImage";
-            this.songImage.Size = new System.Drawing.Size(179, 166);
+            this.songImage.Size = new System.Drawing.Size(256, 256);
+            this.songImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.songImage.TabIndex = 4;
             this.songImage.TabStop = false;
             // 
             // timeSlider
             // 
-            this.timeSlider.Location = new System.Drawing.Point(116, 395);
+            this.timeSlider.Location = new System.Drawing.Point(155, 486);
+            this.timeSlider.Margin = new System.Windows.Forms.Padding(4);
             this.timeSlider.Name = "timeSlider";
-            this.timeSlider.Size = new System.Drawing.Size(143, 45);
+            this.timeSlider.Size = new System.Drawing.Size(191, 56);
             this.timeSlider.TabIndex = 5;
             // 
             // songLabel
             // 
             this.songLabel.AutoSize = true;
-            this.songLabel.Location = new System.Drawing.Point(158, 226);
+            this.songLabel.Location = new System.Drawing.Point(211, 278);
+            this.songLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.songLabel.Name = "songLabel";
-            this.songLabel.Size = new System.Drawing.Size(60, 13);
+            this.songLabel.Size = new System.Drawing.Size(79, 16);
             this.songLabel.TabIndex = 6;
-            this.songLabel.Text = "SongName";
+            this.songLabel.Text = "Song Name";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(366, 452);
+            this.ClientSize = new System.Drawing.Size(488, 556);
             this.Controls.Add(this.songLabel);
             this.Controls.Add(this.timeSlider);
             this.Controls.Add(this.songImage);
@@ -114,7 +126,7 @@
             this.Controls.Add(this.nextbutton);
             this.Controls.Add(this.pauseButton);
             this.Controls.Add(this.backButton);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Music App";
             this.Load += new System.EventHandler(this.Form1_Load);

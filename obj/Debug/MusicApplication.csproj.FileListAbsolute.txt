@@ -18,3 +18,4 @@ C:\Users\efeka\Documents\GitHub\MusicApplication\obj\Debug\MusicApplication.cspr
 C:\Users\efeka\Documents\GitHub\MusicApplication\obj\Debug\MusicApplication.csproj.CoreCompileInputs.cache
 C:\Users\efeka\Documents\GitHub\MusicApplication\obj\Debug\MusicApplication.exe
 C:\Users\efeka\Documents\GitHub\MusicApplication\obj\Debug\MusicApplication.pdb
+C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\bin\Debug\defaultsongpic.png
