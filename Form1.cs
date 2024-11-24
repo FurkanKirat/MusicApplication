@@ -15,6 +15,7 @@ namespace MusicApplication
         public Form1()
         {
             InitializeComponent();
+            label1.Text = "Choose a music";
             this.Text = "Music App";
         }
 
