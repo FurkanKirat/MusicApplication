@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.backButton = new System.Windows.Forms.Button();
             this.pauseButton = new System.Windows.Forms.Button();
             this.nextbutton = new System.Windows.Forms.Button();
@@ -77,6 +78,7 @@
             // 
             // songImage
             // 
+            this.songImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("songImage.BackgroundImage")));
             this.songImage.Location = new System.Drawing.Point(102, 42);
             this.songImage.Name = "songImage";
             this.songImage.Size = new System.Drawing.Size(169, 145);
