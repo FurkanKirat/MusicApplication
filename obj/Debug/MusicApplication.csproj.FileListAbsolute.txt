@@ -8,3 +8,13 @@ C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\obj\Debug\
 C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\obj\Debug\MusicApplication.exe
 C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\obj\Debug\MusicApplication.pdb
 C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\obj\Debug\MusicApplication.Form1.resources
+C:\Users\efeka\Documents\GitHub\MusicApplication\bin\Debug\MusicApplication.exe.config
+C:\Users\efeka\Documents\GitHub\MusicApplication\bin\Debug\MusicApplication.exe
+C:\Users\efeka\Documents\GitHub\MusicApplication\bin\Debug\MusicApplication.pdb
+C:\Users\efeka\Documents\GitHub\MusicApplication\obj\Debug\MusicApplication.csproj.AssemblyReference.cache
+C:\Users\efeka\Documents\GitHub\MusicApplication\obj\Debug\MusicApplication.Form1.resources
+C:\Users\efeka\Documents\GitHub\MusicApplication\obj\Debug\MusicApplication.Properties.Resources.resources
+C:\Users\efeka\Documents\GitHub\MusicApplication\obj\Debug\MusicApplication.csproj.GenerateResource.cache
+C:\Users\efeka\Documents\GitHub\MusicApplication\obj\Debug\MusicApplication.csproj.CoreCompileInputs.cache
+C:\Users\efeka\Documents\GitHub\MusicApplication\obj\Debug\MusicApplication.exe
+C:\Users\efeka\Documents\GitHub\MusicApplication\obj\Debug\MusicApplication.pdb
