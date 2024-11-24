@@ -7,3 +7,4 @@ C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\obj\Debug\
 C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\obj\Debug\MusicApplication.csproj.CoreCompileInputs.cache
 C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\obj\Debug\MusicApplication.exe
 C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\obj\Debug\MusicApplication.pdb
+C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\obj\Debug\MusicApplication.Form1.resources
