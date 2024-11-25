@@ -26,6 +26,10 @@ namespace MusicApplication
         string[] lines = new string[2];
         public Form1()
         {
+            if (!System.IO.File.Exists(filePath))
+            {
+                Directory.CreateDirectory(filePath);
+            }
             lines = File.ReadAllLines(filePath);
             if (lines.Length>0)
             {
