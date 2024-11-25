@@ -28,11 +28,12 @@ namespace MusicApplication
         {
             if (!System.IO.File.Exists(filePath))
             {
-                Directory.CreateDirectory(filePath);
+                File.Create(filePath);
             }
-            lines = File.ReadAllLines(filePath);
-            if (lines.Length>0)
+            
+            if (File.ReadAllLines(filePath).Length>0)
             {
+                lines = File.ReadAllLines(filePath);
                 if (lines[1] != null)
                 {
                     currentSong = Int32.Parse(lines[1]);
@@ -57,9 +58,16 @@ namespace MusicApplication
                 songs = Directory.GetFiles(lines[0], "*.mp3");
 
             }
-            audioFile = new AudioFileReader(songs[currentSong]);
-            outputDevice = new WaveOutEvent();
-            outputDevice.Init(audioFile);
+            try
+            {
+                audioFile = new AudioFileReader(songs[currentSong]);
+                outputDevice = new WaveOutEvent();
+                outputDevice.Init(audioFile);
+            }
+            catch (Exception ex)
+            {
+            }
+            
 
 
             InitializeComponent();
