@@ -23,20 +23,51 @@ namespace MusicApplication
         bool isPlaying = true;
         string[] songs = null;
         int currentSong = 0;
-        string[] lines;
+        string[] lines = new string[2];
         public Form1()
         {
             lines = File.ReadAllLines(filePath);
-            songs = Directory.GetFiles(lines[0], "*.mp3");
+            if (lines.Length>0)
+            {
+                if (lines[1] != null)
+                {
+                    currentSong = Int32.Parse(lines[1]);
+                }
+                else
+                {
+                    currentSong = 0;
+                    lines[1] = 0+"";
+                }
 
-            
+                songs = Directory.GetFiles(lines[0], "*.mp3");
+                   
+            }
+
+            else
+            {
+                lines = new string[2];
+                lines[0] = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                lines[1] = 0+"";
+                currentSong = 0;
+                File.WriteAllLines(filePath, lines);
+                songs = Directory.GetFiles(lines[0], "*.mp3");
+
+            }
+            audioFile = new AudioFileReader(songs[currentSong]);
+            outputDevice = new WaveOutEvent();
+            outputDevice.Init(audioFile);
+
+
             InitializeComponent();
             listBox.Items.Clear();
             foreach (var songPath in songs)
             {
-                listBox.Items.Add(Path.GetFileName(songPath)); // Sadece dosya adını al
+                if (songPath != null)
+                {
+                    listBox.Items.Add(Path.GetFileName(songPath)); // Sadece dosya adını al
+                }
             }
-            currentSong = 0;
+           
         }
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -86,15 +117,19 @@ namespace MusicApplication
                 if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
                 {
                     listBox.Items.Clear();
-                    File.WriteAllText(filePath, folderBrowserDialog.SelectedPath);
 
-
+                    songLabel.Text = lines.Length + "";
                     // Klasördeki MP3 dosyalarını listele
-                    lines = File.ReadAllLines(filePath);
+
+                    lines[0] = folderBrowserDialog.SelectedPath;
+                    lines[1] = 0 + "";
+                    currentSong = 0;
+
+                    File.WriteAllLines(filePath, lines);
                     songs = Directory.GetFiles(lines[0], "*.mp3");
 
                     // ListBox'a ekle
-                    
+                   
                     
                     foreach (var filePath in songs)
                     {
@@ -134,7 +169,11 @@ namespace MusicApplication
 
         private void listBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            currentSong = listBox.SelectedIndex;
+            
+            lines[1] = listBox.SelectedIndex + "";
+            File.WriteAllLines(filePath, lines, Encoding.UTF8);
+            
+            currentSong = Int32.Parse(lines[1]);
             Play();
 
         }
