@@ -16,16 +16,27 @@ namespace MusicApplication
     public partial class Form1 : Form
     {
         string content = "";
-        string filePath = @"C:%userprofile%\AppData\Local\Temp\songlist.txt";
+        string filePath = Path.GetTempPath()+@"\songlist.txt";
 
         private WaveOutEvent outputDevice;
         private AudioFileReader audioFile;
         bool isPlaying = true;
         string[] songs = null;
         int currentSong = 0;
+        string[] lines;
         public Form1()
         {
+            lines = File.ReadAllLines(filePath);
+            songs = Directory.GetFiles(lines[0], "*.mp3");
+
+            
             InitializeComponent();
+            listBox.Items.Clear();
+            foreach (var songPath in songs)
+            {
+                listBox.Items.Add(Path.GetFileName(songPath)); // Sadece dosya adını al
+            }
+            currentSong = 0;
         }
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -74,14 +85,16 @@ namespace MusicApplication
                 folderBrowserDialog.Description = "Bir klasör seçin";
                 if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
                 {
+                    listBox.Items.Clear();
                     File.WriteAllText(filePath, folderBrowserDialog.SelectedPath);
-                    string selectedPath = folderBrowserDialog.SelectedPath;
+
 
                     // Klasördeki MP3 dosyalarını listele
-                    songs = Directory.GetFiles(selectedPath, "*.mp3");
+                    lines = File.ReadAllLines(filePath);
+                    songs = Directory.GetFiles(lines[0], "*.mp3");
 
                     // ListBox'a ekle
-                    listBox.Items.Clear();
+                    
                     
                     foreach (var filePath in songs)
                     {
@@ -92,18 +105,6 @@ namespace MusicApplication
                 }
 
             }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         }
@@ -139,10 +140,6 @@ namespace MusicApplication
         }
         public void Play()
         {
-
-
-
-
 
             if (outputDevice != null)
             {

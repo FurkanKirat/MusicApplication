@@ -41,3 +41,14 @@ C:\Users\efeka\Documents\GitHub\MusicApplication\bin\Debug\NAudio.WinMM.xml
 C:\Users\efeka\Documents\GitHub\MusicApplication\bin\Debug\System.Security.AccessControl.xml
 C:\Users\efeka\Documents\GitHub\MusicApplication\bin\Debug\System.Security.Principal.Windows.xml
 C:\Users\efeka\Documents\GitHub\MusicApplication\obj\Debug\MusicApp.EEB7685E.Up2Date
+C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\bin\Debug\NAudio.xml
+C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\bin\Debug\NAudio.Asio.xml
+C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\bin\Debug\NAudio.Core.xml
+C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\bin\Debug\NAudio.Midi.xml
+C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\bin\Debug\NAudio.Wasapi.xml
+C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\bin\Debug\NAudio.WinForms.xml
+C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\bin\Debug\NAudio.WinMM.xml
+C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\bin\Debug\System.Security.AccessControl.xml
+C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\obj\Debug\MusicApp.EEB7685E.Up2Date
