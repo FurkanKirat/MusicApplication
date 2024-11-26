@@ -17,15 +17,17 @@ namespace MusicApplication
     {
         string content = "";
         string filePath = Path.GetTempPath()+@"\songlist.txt";
-
+        
         private WaveOutEvent outputDevice;
         private AudioFileReader audioFile;
         bool isPlaying = true;
         string[] songs = null;
         int currentSong = 0;
         string[] lines = new string[2];
+        private Timer timer;
         public Form1()
-        {
+        {   
+
             if (!System.IO.File.Exists(filePath))
             {
                 File.Create(filePath);
@@ -63,6 +65,7 @@ namespace MusicApplication
                 audioFile = new AudioFileReader(songs[currentSong]);
                 outputDevice = new WaveOutEvent();
                 outputDevice.Init(audioFile);
+                outputDevice.Volume = (float)1 / 2;
             }
             catch (Exception ex)
             {
@@ -72,6 +75,10 @@ namespace MusicApplication
 
             InitializeComponent();
             listBox.Items.Clear();
+            timer = new Timer();
+            timer.Interval = 1000;
+            timer.Tick += Timer_Tick;
+
             foreach (var songPath in songs)
             {
                 if (songPath != null)
@@ -83,21 +90,21 @@ namespace MusicApplication
         }
         protected override void OnPaint(PaintEventArgs e)
         {
-            base.OnPaint(e);
+            //base.OnPaint(e);
 
-            // Çizim yüzeyi
-            Graphics graphics = e.Graphics;
+            //// Çizim yüzeyi
+            //Graphics graphics = e.Graphics;
 
-            // Gradyan fırça oluştur
-            using (LinearGradientBrush brush = new LinearGradientBrush(
-                this.ClientRectangle, // Gradyan alanı
-                Color.GreenYellow,           // Başlangıç rengi
-                Color.LimeGreen,            // Bitiş rengi
-                LinearGradientMode.ForwardDiagonal)) // Yön: Yatay
-            {
-                // Gradyanı doldur
-                graphics.FillRectangle(brush, this.ClientRectangle);
-            }
+            //// Gradyan fırça oluştur
+            //using (LinearGradientBrush brush = new LinearGradientBrush(
+            //    this.ClientRectangle, // Gradyan alanı
+            //    Color.GreenYellow,           // Başlangıç rengi
+            //    Color.LimeGreen,            // Bitiş rengi
+            //    LinearGradientMode.ForwardDiagonal)) // Yön: Yatay
+            //{
+            //    // Gradyanı doldur
+            //    graphics.FillRectangle(brush, this.ClientRectangle);
+            //}
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -161,22 +168,49 @@ namespace MusicApplication
             if (isPlaying)
             {
                 outputDevice.Play();
+                timer.Start();
             }
             else
             {
                 outputDevice.Stop();
+                timer.Stop();
             }
             isPlaying = !isPlaying;
         }
 
         private void nextbutton_Click(object sender, EventArgs e)
         {
-
+            if (currentSong != songs.Length-1)
+            {
+                currentSong++;
+                listBox.SelectedIndex = currentSong;
+                lines[1] = currentSong + "";
+                File.WriteAllLines(filePath, lines, Encoding.UTF8);
+                Play();
+            }
+            else
+            {
+                songLabel.Text = "Cannot go next from the last row of the list!";
+            }
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
-
+            if (currentSong != 0)
+            {
+                currentSong--;
+                listBox.SelectedIndex = currentSong;
+                lines[1] = currentSong + "";
+                File.WriteAllLines(filePath, lines, Encoding.UTF8);
+                Play();
+            }
+            else
+            {
+                songLabel.Text = "Cannot go back from the first row of the list!";
+            }
+            
+            
+            
         }
 
         private void listBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -208,6 +242,28 @@ namespace MusicApplication
             songLabel.Text = $"Playing: {songs[currentSong].Substring(songs[currentSong].LastIndexOf(@"\")+1)}";
         }
 
+        private void volumeSlider_Scroll(object sender, EventArgs e)
+        {
+            outputDevice.Volume = (float)volumeSlider.Value/100; 
+        }
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            TimeSpan current = audioFile.CurrentTime;
+            TimeSpan total = audioFile.TotalTime;
+
+            currentTime.Text = $"Anlık süre: {current.Minutes}:{current.Seconds}";
+            totalTime.Text = $"Toplam süre: {total.Minutes}:{total.Seconds}";
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
     }
 
 
