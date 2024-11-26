@@ -117,8 +117,11 @@ namespace MusicApplication
             this.timeSlider.Location = new System.Drawing.Point(149, 491);
             this.timeSlider.Margin = new System.Windows.Forms.Padding(4);
             this.timeSlider.Name = "timeSlider";
+            this.volumeSlider.Minimum = 0;
+            this.volumeSlider.Value = 0;
             this.timeSlider.Size = new System.Drawing.Size(191, 56);
             this.timeSlider.TabIndex = 5;
+            this.timeSlider.Scroll += new System.EventHandler(this.timeSlider_Scroll);
             // 
             // songLabel
             // 

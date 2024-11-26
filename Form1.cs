@@ -78,6 +78,7 @@ namespace MusicApplication
             timer = new Timer();
             timer.Interval = 1000;
             timer.Tick += Timer_Tick;
+            timeSlider.Maximum = (int)audioFile.TotalTime.TotalSeconds;
 
             foreach (var songPath in songs)
             {
@@ -191,6 +192,7 @@ namespace MusicApplication
             else
             {
                 songLabel.Text = "Cannot go next from the last row of the list!";
+                timeSlider.Maximum = (int)audioFile.TotalTime.TotalSeconds;
             }
         }
 
@@ -220,6 +222,7 @@ namespace MusicApplication
             File.WriteAllLines(filePath, lines, Encoding.UTF8);
             
             currentSong = Int32.Parse(lines[1]);
+            timeSlider.Maximum = (int)audioFile.TotalTime.TotalSeconds;
             Play();
 
         }
@@ -253,6 +256,7 @@ namespace MusicApplication
 
             currentTime.Text = $"Anlık süre: {current.Minutes}:{current.Seconds}";
             totalTime.Text = $"Toplam süre: {total.Minutes}:{total.Seconds}";
+            timeSlider.Value = (int)audioFile.CurrentTime.TotalSeconds;
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -263,6 +267,11 @@ namespace MusicApplication
         private void label1_Click_2(object sender, EventArgs e)
         {
 
+        }
+
+        private void timeSlider_Scroll(object sender, EventArgs e)
+        {
+            audioFile.CurrentTime = TimeSpan.FromSeconds(timeSlider.Value);
         }
     }
 
