@@ -174,7 +174,7 @@ namespace MusicApplication
                 File.WriteAllLines(filePath, lines, Encoding.UTF8);
                 Play();
                 isPlaying = !isPlaying ;
-                isPlaying = !isPlaying;
+                
 
             }
             else

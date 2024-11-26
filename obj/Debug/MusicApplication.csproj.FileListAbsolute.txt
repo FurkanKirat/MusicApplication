@@ -71,3 +71,25 @@ C:\Users\Furkan Kırat\Documents\C# Projects\MusicApplication\obj\Debug\MusicApp
 C:\Users\Furkan Kırat\Documents\C# Projects\MusicApplication\obj\Debug\MusicApplication.csproj.CoreCompileInputs.cache
 C:\Users\Furkan Kırat\Documents\C# Projects\MusicApplication\obj\Debug\MusicApplication.exe
 C:\Users\Furkan Kırat\Documents\C# Projects\MusicApplication\obj\Debug\MusicApplication.pdb
+C:\Users\efeka\Desktop\MusicApp\MusicApplication\obj\Debug\MusicApplication.csproj.AssemblyReference.cache
+C:\Users\efeka\Desktop\MusicApp\MusicApplication\obj\Debug\MusicApplication.Form1.resources
+C:\Users\efeka\Desktop\MusicApp\MusicApplication\obj\Debug\MusicApplication.Properties.Resources.resources
+C:\Users\efeka\Desktop\MusicApp\MusicApplication\obj\Debug\MusicApplication.csproj.GenerateResource.cache
+C:\Users\efeka\Desktop\MusicApp\MusicApplication\obj\Debug\MusicApplication.csproj.CoreCompileInputs.cache
+C:\Users\efeka\Desktop\MusicApp\MusicApplication\obj\Debug\MusicApplication.exe
+C:\Users\efeka\Desktop\MusicApp\MusicApplication\obj\Debug\MusicApplication.pdb
+C:\Users\efeka\Desktop\MusicApp\MusicApplication\bin\Debug\defaultsongpic.png
+C:\Users\efeka\Desktop\MusicApp\MusicApplication\bin\Debug\MusicApplication.exe.config
+C:\Users\efeka\Desktop\MusicApp\MusicApplication\bin\Debug\MusicApplication.exe
+C:\Users\efeka\Desktop\MusicApp\MusicApplication\bin\Debug\MusicApplication.pdb
+C:\Users\efeka\Desktop\MusicApp\MusicApplication\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Users\efeka\Desktop\MusicApp\MusicApplication\bin\Debug\NAudio.xml
+C:\Users\efeka\Desktop\MusicApp\MusicApplication\bin\Debug\NAudio.Asio.xml
+C:\Users\efeka\Desktop\MusicApp\MusicApplication\bin\Debug\NAudio.Core.xml
+C:\Users\efeka\Desktop\MusicApp\MusicApplication\bin\Debug\NAudio.Midi.xml
+C:\Users\efeka\Desktop\MusicApp\MusicApplication\bin\Debug\NAudio.Wasapi.xml
+C:\Users\efeka\Desktop\MusicApp\MusicApplication\bin\Debug\NAudio.WinForms.xml
+C:\Users\efeka\Desktop\MusicApp\MusicApplication\bin\Debug\NAudio.WinMM.xml
+C:\Users\efeka\Desktop\MusicApp\MusicApplication\bin\Debug\System.Security.AccessControl.xml
+C:\Users\efeka\Desktop\MusicApp\MusicApplication\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\efeka\Desktop\MusicApp\MusicApplication\obj\Debug\MusicApp.EEB7685E.Up2Date
