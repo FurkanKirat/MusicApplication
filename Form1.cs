@@ -173,22 +173,23 @@ namespace MusicApplication
             if (currentSong != songs.Length-1)
             {
                 currentSong++;
-                listBox.SelectedIndex = currentSong;
-                lines[1] = currentSong + "";
-                File.WriteAllLines(filePath, lines, Encoding.UTF8);
-                ChangeSong();
-                isPlaying = !isPlaying;
-                startPlaying();
                 
                 
 
             }
             else
             {
-                songLabel.Text = "Cannot go next from the last row of the list!";
-                timeSlider.Maximum = (int)audioFile.TotalTime.TotalSeconds;
+                currentSong = 0;
             }
-            
+
+            listBox.SelectedIndex = currentSong;
+            lines[1] = currentSong + "";
+            File.WriteAllLines(filePath, lines, Encoding.UTF8);
+            ChangeSong();
+            isPlaying = !isPlaying;
+            startPlaying();
+
+
         }
 
         // Calls previous song 
@@ -197,20 +198,21 @@ namespace MusicApplication
             if (currentSong != 0)
             {
                 currentSong--;
-                listBox.SelectedIndex = currentSong;
-                lines[1] = currentSong + "";
-                File.WriteAllLines(filePath, lines, Encoding.UTF8);
-
-                ChangeSong();
-                isPlaying = !isPlaying;
-                startPlaying();
+                
             }
             else
             {
-                songLabel.Text = "Cannot go back from the first row of the list!";
+                currentSong = songs.Length-1;
             }
+            listBox.SelectedIndex = currentSong;
+            lines[1] = currentSong + "";
+            File.WriteAllLines(filePath, lines, Encoding.UTF8);
 
-            
+            ChangeSong();
+            isPlaying = !isPlaying;
+            startPlaying();
+
+
 
         }
 
@@ -259,8 +261,8 @@ namespace MusicApplication
             TimeSpan current = audioFile.CurrentTime;
             TimeSpan total = audioFile.TotalTime;
 
-            currentTime.Text = $"Current time: {current.Minutes}:{current.Seconds}";
-            totalTime.Text = $"Total Time: {total.Minutes}:{total.Seconds}";
+            currentTime.Text = $"{current.Minutes}:{current.Seconds}";
+            totalTime.Text = $"{total.Minutes}:{total.Seconds}";
             timeSlider.Value = (int)audioFile.CurrentTime.TotalSeconds;
         }
 

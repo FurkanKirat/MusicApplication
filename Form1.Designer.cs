@@ -55,9 +55,10 @@ namespace MusicApplication
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(48, 370);
+            this.backButton.Location = new System.Drawing.Point(64, 455);
+            this.backButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(75, 23);
+            this.backButton.Size = new System.Drawing.Size(100, 28);
             this.backButton.TabIndex = 0;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = true;
@@ -65,9 +66,10 @@ namespace MusicApplication
             // 
             // pauseButton
             // 
-            this.pauseButton.Location = new System.Drawing.Point(129, 370);
+            this.pauseButton.Location = new System.Drawing.Point(172, 455);
+            this.pauseButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pauseButton.Name = "pauseButton";
-            this.pauseButton.Size = new System.Drawing.Size(75, 23);
+            this.pauseButton.Size = new System.Drawing.Size(100, 28);
             this.pauseButton.TabIndex = 1;
             this.pauseButton.Text = "Pause/Start";
             this.pauseButton.UseVisualStyleBackColor = true;
@@ -75,9 +77,10 @@ namespace MusicApplication
             // 
             // nextbutton
             // 
-            this.nextbutton.Location = new System.Drawing.Point(210, 370);
+            this.nextbutton.Location = new System.Drawing.Point(280, 455);
+            this.nextbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nextbutton.Name = "nextbutton";
-            this.nextbutton.Size = new System.Drawing.Size(75, 23);
+            this.nextbutton.Size = new System.Drawing.Size(100, 28);
             this.nextbutton.TabIndex = 2;
             this.nextbutton.Text = "Next";
             this.nextbutton.UseVisualStyleBackColor = true;
@@ -85,10 +88,11 @@ namespace MusicApplication
             // 
             // volumeSlider
             // 
-            this.volumeSlider.Location = new System.Drawing.Point(105, 319);
+            this.volumeSlider.Location = new System.Drawing.Point(140, 393);
+            this.volumeSlider.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.volumeSlider.Maximum = 100;
             this.volumeSlider.Name = "volumeSlider";
-            this.volumeSlider.Size = new System.Drawing.Size(112, 45);
+            this.volumeSlider.Size = new System.Drawing.Size(149, 56);
             this.volumeSlider.TabIndex = 3;
             this.volumeSlider.Value = 50;
             this.volumeSlider.Scroll += new System.EventHandler(this.volumeSlider_Scroll);
@@ -100,28 +104,30 @@ namespace MusicApplication
             this.songImage.ErrorImage = ((System.Drawing.Image)(resources.GetObject("songImage.ErrorImage")));
             this.songImage.Image = ((System.Drawing.Image)(resources.GetObject("songImage.Image")));
             this.songImage.InitialImage = ((System.Drawing.Image)(resources.GetObject("songImage.InitialImage")));
-            this.songImage.Location = new System.Drawing.Point(-4, 0);
+            this.songImage.Location = new System.Drawing.Point(-5, 0);
             this.songImage.Margin = new System.Windows.Forms.Padding(0);
             this.songImage.Name = "songImage";
-            this.songImage.Size = new System.Drawing.Size(313, 271);
+            this.songImage.Size = new System.Drawing.Size(417, 334);
             this.songImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.songImage.TabIndex = 4;
             this.songImage.TabStop = false;
             // 
             // timeSlider
             // 
-            this.timeSlider.Location = new System.Drawing.Point(87, 399);
+            this.timeSlider.Location = new System.Drawing.Point(116, 491);
+            this.timeSlider.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.timeSlider.Name = "timeSlider";
-            this.timeSlider.Size = new System.Drawing.Size(143, 45);
+            this.timeSlider.Size = new System.Drawing.Size(191, 56);
             this.timeSlider.TabIndex = 5;
             this.timeSlider.Scroll += new System.EventHandler(this.timeSlider_Scroll);
             // 
             // songLabel
             // 
             this.songLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.songLabel.Location = new System.Drawing.Point(0, 443);
+            this.songLabel.Location = new System.Drawing.Point(0, 545);
+            this.songLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.songLabel.Name = "songLabel";
-            this.songLabel.Size = new System.Drawing.Size(309, 13);
+            this.songLabel.Size = new System.Drawing.Size(412, 16);
             this.songLabel.TabIndex = 6;
             this.songLabel.Text = "Song Name";
             this.songLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -129,10 +135,10 @@ namespace MusicApplication
             // openButton
             // 
             this.openButton.Image = global::MusicApplication.Properties.Resources.folder;
-            this.openButton.Location = new System.Drawing.Point(264, 13);
-            this.openButton.Margin = new System.Windows.Forms.Padding(4);
+            this.openButton.Location = new System.Drawing.Point(352, 16);
+            this.openButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.openButton.Name = "openButton";
-            this.openButton.Size = new System.Drawing.Size(32, 31);
+            this.openButton.Size = new System.Drawing.Size(43, 38);
             this.openButton.TabIndex = 7;
             this.openButton.UseVisualStyleBackColor = true;
             this.openButton.Click += new System.EventHandler(this.openButton_Click);
@@ -143,38 +149,38 @@ namespace MusicApplication
             this.listBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.listBox.FormattingEnabled = true;
-            this.listBox.Location = new System.Drawing.Point(105, 274);
+            this.listBox.ItemHeight = 16;
+            this.listBox.Location = new System.Drawing.Point(140, 337);
+            this.listBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(120, 39);
+            this.listBox.Size = new System.Drawing.Size(160, 48);
             this.listBox.TabIndex = 8;
             this.listBox.SelectedIndexChanged += new System.EventHandler(this.listBox_SelectedIndexChanged);
             // 
             // totalTime
             // 
             this.totalTime.AutoSize = true;
-            this.totalTime.Location = new System.Drawing.Point(243, 399);
-            this.totalTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.totalTime.Location = new System.Drawing.Point(302, 491);
             this.totalTime.Name = "totalTime";
-            this.totalTime.Size = new System.Drawing.Size(54, 13);
+            this.totalTime.Size = new System.Drawing.Size(69, 16);
             this.totalTime.TabIndex = 9;
             this.totalTime.Text = "TotalTime";
             // 
             // currentTime
             // 
             this.currentTime.AutoSize = true;
-            this.currentTime.Location = new System.Drawing.Point(13, 399);
-            this.currentTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.currentTime.Location = new System.Drawing.Point(75, 491);
             this.currentTime.Name = "currentTime";
-            this.currentTime.Size = new System.Drawing.Size(64, 13);
+            this.currentTime.Size = new System.Drawing.Size(80, 16);
             this.currentTime.TabIndex = 10;
             this.currentTime.Text = "CurrentTime";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(309, 456);
+            this.ClientSize = new System.Drawing.Size(412, 561);
             this.Controls.Add(this.currentTime);
             this.Controls.Add(this.totalTime);
             this.Controls.Add(this.listBox);
@@ -187,7 +193,7 @@ namespace MusicApplication
             this.Controls.Add(this.pauseButton);
             this.Controls.Add(this.backButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Music App";
             this.Load += new System.EventHandler(this.Form1_Load);
