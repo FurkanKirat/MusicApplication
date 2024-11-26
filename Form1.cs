@@ -150,6 +150,10 @@ namespace MusicApplication
         // Pauses or plays the song
         private void pauseButton_Click(object sender, EventArgs e)
         {
+            startPlaying();
+        }
+        public void startPlaying()
+        {
             if (isPlaying)
             {
                 outputDevice.Play();
@@ -172,8 +176,10 @@ namespace MusicApplication
                 listBox.SelectedIndex = currentSong;
                 lines[1] = currentSong + "";
                 File.WriteAllLines(filePath, lines, Encoding.UTF8);
-                Play();
-                isPlaying = !isPlaying ;
+                ChangeSong();
+                isPlaying = !isPlaying;
+                startPlaying();
+                
                 
 
             }
@@ -194,8 +200,10 @@ namespace MusicApplication
                 listBox.SelectedIndex = currentSong;
                 lines[1] = currentSong + "";
                 File.WriteAllLines(filePath, lines, Encoding.UTF8);
-                Play();
+
+                ChangeSong();
                 isPlaying = !isPlaying;
+                startPlaying();
             }
             else
             {
@@ -215,12 +223,12 @@ namespace MusicApplication
             
             currentSong = Int32.Parse(lines[1]);
             timeSlider.Maximum = (int)audioFile.TotalTime.TotalSeconds;
-            Play();
+            ChangeSong();
 
         }
 
         // Change song algorithm
-        public void Play()
+        public void ChangeSong()
         {
 
             if (outputDevice != null)
