@@ -65,7 +65,7 @@ namespace MusicApplication
                 audioFile = new AudioFileReader(songs[currentSong]);
                 outputDevice = new WaveOutEvent();
                 outputDevice.Init(audioFile);
-                outputDevice.Volume = (float)1 / 2;
+                outputDevice.Volume = (float)1/2 ;
             }
             catch (Exception ex)
             {
@@ -188,12 +188,14 @@ namespace MusicApplication
                 lines[1] = currentSong + "";
                 File.WriteAllLines(filePath, lines, Encoding.UTF8);
                 Play();
+                isPlaying = !isPlaying;
             }
             else
             {
                 songLabel.Text = "Cannot go next from the last row of the list!";
                 timeSlider.Maximum = (int)audioFile.TotalTime.TotalSeconds;
             }
+            
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -205,14 +207,15 @@ namespace MusicApplication
                 lines[1] = currentSong + "";
                 File.WriteAllLines(filePath, lines, Encoding.UTF8);
                 Play();
+                isPlaying = !isPlaying;
             }
             else
             {
                 songLabel.Text = "Cannot go back from the first row of the list!";
             }
+
             
-            
-            
+
         }
 
         private void listBox_SelectedIndexChanged(object sender, EventArgs e)

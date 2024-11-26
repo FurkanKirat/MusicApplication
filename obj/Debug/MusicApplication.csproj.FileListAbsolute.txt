@@ -20,16 +20,6 @@ C:\Users\efeka\Documents\GitHub\MusicApplication\obj\Debug\MusicApplication.exe
 C:\Users\efeka\Documents\GitHub\MusicApplication\obj\Debug\MusicApplication.pdb
 C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\bin\Debug\defaultsongpic.png
 C:\Users\efeka\Documents\GitHub\MusicApplication\bin\Debug\defaultsongpic.png
-C:\Users\efeka\Documents\GitHub\MusicApplication\bin\Debug\Microsoft.Win32.Registry.dll
-C:\Users\efeka\Documents\GitHub\MusicApplication\bin\Debug\NAudio.Asio.dll
-C:\Users\efeka\Documents\GitHub\MusicApplication\bin\Debug\NAudio.Core.dll
-C:\Users\efeka\Documents\GitHub\MusicApplication\bin\Debug\NAudio.dll
-C:\Users\efeka\Documents\GitHub\MusicApplication\bin\Debug\NAudio.Midi.dll
-C:\Users\efeka\Documents\GitHub\MusicApplication\bin\Debug\NAudio.Wasapi.dll
-C:\Users\efeka\Documents\GitHub\MusicApplication\bin\Debug\NAudio.WinForms.dll
-C:\Users\efeka\Documents\GitHub\MusicApplication\bin\Debug\NAudio.WinMM.dll
-C:\Users\efeka\Documents\GitHub\MusicApplication\bin\Debug\System.Security.AccessControl.dll
-C:\Users\efeka\Documents\GitHub\MusicApplication\bin\Debug\System.Security.Principal.Windows.dll
 C:\Users\efeka\Documents\GitHub\MusicApplication\bin\Debug\Microsoft.Win32.Registry.xml
 C:\Users\efeka\Documents\GitHub\MusicApplication\bin\Debug\NAudio.xml
 C:\Users\efeka\Documents\GitHub\MusicApplication\bin\Debug\NAudio.Asio.xml
@@ -52,3 +42,25 @@ C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\bin\Debug\
 C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\bin\Debug\System.Security.AccessControl.xml
 C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\bin\Debug\System.Security.Principal.Windows.xml
 C:\Users\Furkan Kırat\source\repos\MusicApplication\MusicApplication\obj\Debug\MusicApp.EEB7685E.Up2Date
+C:\Users\efeka\Desktop\GitHub\MusicApplication\bin\Debug\defaultsongpic.png
+C:\Users\efeka\Desktop\GitHub\MusicApplication\bin\Debug\MusicApplication.exe.config
+C:\Users\efeka\Desktop\GitHub\MusicApplication\bin\Debug\MusicApplication.exe
+C:\Users\efeka\Desktop\GitHub\MusicApplication\bin\Debug\MusicApplication.pdb
+C:\Users\efeka\Desktop\GitHub\MusicApplication\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Users\efeka\Desktop\GitHub\MusicApplication\bin\Debug\NAudio.xml
+C:\Users\efeka\Desktop\GitHub\MusicApplication\bin\Debug\NAudio.Asio.xml
+C:\Users\efeka\Desktop\GitHub\MusicApplication\bin\Debug\NAudio.Core.xml
+C:\Users\efeka\Desktop\GitHub\MusicApplication\bin\Debug\NAudio.Midi.xml
+C:\Users\efeka\Desktop\GitHub\MusicApplication\bin\Debug\NAudio.Wasapi.xml
+C:\Users\efeka\Desktop\GitHub\MusicApplication\bin\Debug\NAudio.WinForms.xml
+C:\Users\efeka\Desktop\GitHub\MusicApplication\bin\Debug\NAudio.WinMM.xml
+C:\Users\efeka\Desktop\GitHub\MusicApplication\bin\Debug\System.Security.AccessControl.xml
+C:\Users\efeka\Desktop\GitHub\MusicApplication\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\efeka\Desktop\GitHub\MusicApplication\obj\Debug\MusicApplication.csproj.AssemblyReference.cache
+C:\Users\efeka\Desktop\GitHub\MusicApplication\obj\Debug\MusicApplication.Form1.resources
+C:\Users\efeka\Desktop\GitHub\MusicApplication\obj\Debug\MusicApplication.Properties.Resources.resources
+C:\Users\efeka\Desktop\GitHub\MusicApplication\obj\Debug\MusicApplication.csproj.GenerateResource.cache
+C:\Users\efeka\Desktop\GitHub\MusicApplication\obj\Debug\MusicApplication.csproj.CoreCompileInputs.cache
+C:\Users\efeka\Desktop\GitHub\MusicApplication\obj\Debug\MusicApp.EEB7685E.Up2Date
+C:\Users\efeka\Desktop\GitHub\MusicApplication\obj\Debug\MusicApplication.exe
+C:\Users\efeka\Desktop\GitHub\MusicApplication\obj\Debug\MusicApplication.pdb
