@@ -64,3 +64,10 @@ C:\Users\efeka\Desktop\GitHub\MusicApplication\obj\Debug\MusicApplication.csproj
 C:\Users\efeka\Desktop\GitHub\MusicApplication\obj\Debug\MusicApp.EEB7685E.Up2Date
 C:\Users\efeka\Desktop\GitHub\MusicApplication\obj\Debug\MusicApplication.exe
 C:\Users\efeka\Desktop\GitHub\MusicApplication\obj\Debug\MusicApplication.pdb
+C:\Users\Furkan Kırat\Documents\C# Projects\MusicApplication\obj\Debug\MusicApplication.csproj.AssemblyReference.cache
+C:\Users\Furkan Kırat\Documents\C# Projects\MusicApplication\obj\Debug\MusicApplication.Form1.resources
+C:\Users\Furkan Kırat\Documents\C# Projects\MusicApplication\obj\Debug\MusicApplication.Properties.Resources.resources
+C:\Users\Furkan Kırat\Documents\C# Projects\MusicApplication\obj\Debug\MusicApplication.csproj.GenerateResource.cache
+C:\Users\Furkan Kırat\Documents\C# Projects\MusicApplication\obj\Debug\MusicApplication.csproj.CoreCompileInputs.cache
+C:\Users\Furkan Kırat\Documents\C# Projects\MusicApplication\obj\Debug\MusicApplication.exe
+C:\Users\Furkan Kırat\Documents\C# Projects\MusicApplication\obj\Debug\MusicApplication.pdb

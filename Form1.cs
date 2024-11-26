@@ -15,26 +15,29 @@ namespace MusicApplication
 {
     public partial class Form1 : Form
     {
-        string content = "";
-        string filePath = Path.GetTempPath()+@"\songlist.txt";
+        private string content = "";
+        private string filePath = Path.GetTempPath()+@"\songlist.txt";
         
         private WaveOutEvent outputDevice;
         private AudioFileReader audioFile;
-        bool isPlaying = true;
-        string[] songs = null;
-        int currentSong = 0;
-        string[] lines = new string[2];
+        private bool isPlaying = true;
+        private string[] songs = null;
+        private int currentSong = 0;
+        private string[] lines = new string[2];
         private Timer timer;
         public Form1()
-        {   
-
+        {
+        
+            // If temp file does not exist creates temp file
             if (!System.IO.File.Exists(filePath))
             {
                 File.Create(filePath);
             }
             
+            // Checks if file is not empty
             if (File.ReadAllLines(filePath).Length>0)
-            {
+            {   
+                // Gets the info that app used previously
                 lines = File.ReadAllLines(filePath);
                 if (lines[1] != null)
                 {
@@ -46,12 +49,14 @@ namespace MusicApplication
                     lines[1] = 0+"";
                 }
 
+                // Gets mp3 files in the destinated folder
                 songs = Directory.GetFiles(lines[0], "*.mp3");
                    
             }
 
             else
-            {
+            {   
+                // If temp file is empty writes the temp file
                 lines = new string[2];
                 lines[0] = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 lines[1] = 0+"";
@@ -60,11 +65,15 @@ namespace MusicApplication
                 songs = Directory.GetFiles(lines[0], "*.mp3");
 
             }
+
+            // Initializes audio input
             try
             {
                 audioFile = new AudioFileReader(songs[currentSong]);
                 outputDevice = new WaveOutEvent();
                 outputDevice.Init(audioFile);
+                outputDevice.Volume = (float)1 / 2;
+                
                 outputDevice.Volume = (float)1/2 ;
             }
             catch (Exception ex)
@@ -72,14 +81,23 @@ namespace MusicApplication
             }
             
 
-
+            // Initializes the components and timer
             InitializeComponent();
             listBox.Items.Clear();
             timer = new Timer();
             timer.Interval = 1000;
             timer.Tick += Timer_Tick;
-            timeSlider.Maximum = (int)audioFile.TotalTime.TotalSeconds;
+            try
+            {
+                
+            }
+            catch(Exception e)
+            {
+                timeSlider.Maximum = 100;
+            }
+            
 
+            // Adds songs to the listbox
             foreach (var songPath in songs)
             {
                 if (songPath != null)
@@ -89,57 +107,25 @@ namespace MusicApplication
             }
            
         }
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            //base.OnPaint(e);
-
-            //// Çizim yüzeyi
-            //Graphics graphics = e.Graphics;
-
-            //// Gradyan fırça oluştur
-            //using (LinearGradientBrush brush = new LinearGradientBrush(
-            //    this.ClientRectangle, // Gradyan alanı
-            //    Color.GreenYellow,           // Başlangıç rengi
-            //    Color.LimeGreen,            // Bitiş rengi
-            //    LinearGradientMode.ForwardDiagonal)) // Yön: Yatay
-            //{
-            //    // Gradyanı doldur
-            //    graphics.FillRectangle(brush, this.ClientRectangle);
-            //}
-        }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
+   
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-
-
-        private void openFileDialog1_FileOk_1(object sender, CancelEventArgs e)
-        {
-
-        }
-
-
-
+        //Selects a file and adds all mp3 files in the selected file to the songs array
         private void openButton_Click(object sender, EventArgs e)
         {
             
             using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
             {
-                folderBrowserDialog.Description = "Bir klasör seçin";
+                folderBrowserDialog.Description = "Choose a folder to open music files!";
                 if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
                 {
                     listBox.Items.Clear();
 
                     songLabel.Text = lines.Length + "";
-                    // Klasördeki MP3 dosyalarını listele
 
                     lines[0] = folderBrowserDialog.SelectedPath;
                     lines[1] = 0 + "";
@@ -148,12 +134,9 @@ namespace MusicApplication
                     File.WriteAllLines(filePath, lines);
                     songs = Directory.GetFiles(lines[0], "*.mp3");
 
-                    // ListBox'a ekle
-                   
-                    
                     foreach (var filePath in songs)
                     {
-                        listBox.Items.Add(Path.GetFileName(filePath)); // Sadece dosya adını al
+                        listBox.Items.Add(Path.GetFileName(filePath)); 
                     }
 
 
@@ -164,6 +147,7 @@ namespace MusicApplication
 
         }
 
+        // Pauses or plays the song
         private void pauseButton_Click(object sender, EventArgs e)
         {
             if (isPlaying)
@@ -179,6 +163,7 @@ namespace MusicApplication
             isPlaying = !isPlaying;
         }
 
+        // Calls next song 
         private void nextbutton_Click(object sender, EventArgs e)
         {
             if (currentSong != songs.Length-1)
@@ -188,7 +173,9 @@ namespace MusicApplication
                 lines[1] = currentSong + "";
                 File.WriteAllLines(filePath, lines, Encoding.UTF8);
                 Play();
+                isPlaying = !isPlaying ;
                 isPlaying = !isPlaying;
+
             }
             else
             {
@@ -198,6 +185,7 @@ namespace MusicApplication
             
         }
 
+        // Calls previous song 
         private void backButton_Click(object sender, EventArgs e)
         {
             if (currentSong != 0)
@@ -218,6 +206,7 @@ namespace MusicApplication
 
         }
 
+        // When listbox index changed changes the current song
         private void listBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             
@@ -229,6 +218,8 @@ namespace MusicApplication
             Play();
 
         }
+
+        // Change song algorithm
         public void Play()
         {
 
@@ -248,30 +239,25 @@ namespace MusicApplication
             songLabel.Text = $"Playing: {songs[currentSong].Substring(songs[currentSong].LastIndexOf(@"\")+1)}";
         }
 
+        // When volume slider value changed, changes the audio volume
         private void volumeSlider_Scroll(object sender, EventArgs e)
         {
             outputDevice.Volume = (float)volumeSlider.Value/100; 
         }
+
+        // Timer method
         private void Timer_Tick(object sender, EventArgs e)
         {
             TimeSpan current = audioFile.CurrentTime;
             TimeSpan total = audioFile.TotalTime;
 
-            currentTime.Text = $"Anlık süre: {current.Minutes}:{current.Seconds}";
-            totalTime.Text = $"Toplam süre: {total.Minutes}:{total.Seconds}";
+            currentTime.Text = $"Current time: {current.Minutes}:{current.Seconds}";
+            totalTime.Text = $"Total Time: {total.Minutes}:{total.Seconds}";
             timeSlider.Value = (int)audioFile.CurrentTime.TotalSeconds;
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label1_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
+        // When time slider value is changed changes the current time on the timer
         private void timeSlider_Scroll(object sender, EventArgs e)
         {
             audioFile.CurrentTime = TimeSpan.FromSeconds(timeSlider.Value);
